@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'clement';
+    src: url(/clement.woff2) format('woff2');
+}
+
+.monsec {
+    width: 10rem;
+    height: 4rem;
+    background-color: #efefef;
+    font-family: clement, sans-serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    border: 1px solid gray;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.wdrBtn {
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background-color: #1582C5;
+    color: #fff;
+    border-radius: 50%;
+    border: 1px solid gray;
+}
+
+.wdrBtn:hover {
+    background-color: #ea7d3a;
+    transition: 1.2s;
+}
+
+button.monsec:hover {
+    background-color: black;
+    color: #efefef;
+    transition: 1.2s;
+}
