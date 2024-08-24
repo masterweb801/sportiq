@@ -8,14 +8,14 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   useEffect (() => {
-    if (localStorage.getItem("token") !== null) {
+    if (localStorage.getItem("tokenflg") !== null) {
       setLoggedIn(true);
     }
   }, []);
   return (
     <Router>
       <header>
-        <Navbar loggedIn={loggedIn} />
+        <Navbar loggedIn={loggedIn} money={"100.00"} />
       </header>
       <main>
         <Routes>

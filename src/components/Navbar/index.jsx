@@ -3,11 +3,11 @@ import NavIcon from '/nav-icon.png'
 import './index.css'
 import MonSec from '../MonSec'
 
-const Navbar = (loggedIn) => {
+const Navbar = (props) => {
     return (
         <nav>
             <img src={NavIcon}/>
-            <MonSec loggedIn={loggedIn}/>
+            <MonSec loggedIn={props.loggedIn} money={props.money}/>
         </nav>
     )
 }
