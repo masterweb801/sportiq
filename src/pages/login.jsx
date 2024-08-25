@@ -3,8 +3,7 @@ import { Navigate } from "react-router-dom";
 import "./css/login.css";
 import PhoneInput from 'react-phone-number-input'
 import 'react-phone-number-input/style.css'
-
-const api = "http://localhost/"
+import api from '../server/api';
 
 const Login = (props) => {
   const [name, setName] = useState("");

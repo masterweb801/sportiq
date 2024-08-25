@@ -22,7 +22,8 @@ if ($data !== null) {
         $pass = md5($password);
         $sql2 = "INSERT INTO `users`(`name`, `phone`, `uid`, `pass`) VALUES ('" . $name . "','" . $phone . "','" . $uid . "','" . $pass . "')";
         mysqli_query($conn, $sql2);
-        $token = Token::Sign($pass, "JENDE");
+        $payload = md5($phone);
+        $token = Token::Sign($payload, "JENDE");
         response(200, "Successfull", $token);
     }
 

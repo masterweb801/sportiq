@@ -16,7 +16,8 @@ if ($data !== null) {
     if ($total > 0) {
         $result = mysqli_fetch_assoc($data);
         if ($result['pass'] === md5($password)) {
-            $token = Token::Sign($result['pass'], "JENDE");
+            $payload = md5($phone);
+            $token = Token::Sign($phone, "JENDE");
             response(200, "Succesfull", $token);
         } else {
             response(400, "Invalid Credentials", null);
